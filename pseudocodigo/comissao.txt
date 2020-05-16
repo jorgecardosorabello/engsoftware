@@ -1,0 +1,23 @@
+Algoritmo comissao
+
+Var
+	salarioFixo, valorVendas, porcentComissao, valorComissao, salarioFinal: real
+
+Início
+	
+	Escreva("Digite o Salário Fixo do vendedor: ")
+	Leia(salarioFixo)
+	Escreva("Digite o valor em vendas do vendedor: ")
+	Leia(valorVendas)
+	Escreva("Digite a porcentagem de comissão do vendedor: ")
+	Leia(porcentComissao)
+
+	valorComissao <- valorVendas * (porcentComissao / 100)
+
+	salarioFinal <- salarioFixo + valorComissao
+
+	
+	Escreva("Este funcionário receberá R$ ", valorComissao, " de comissão")
+	Escreva("Portanto o salário final será: R$ ", salarioFinal)
+
+Fim

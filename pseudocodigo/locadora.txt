@@ -1,0 +1,21 @@
+Algoritmo locadora
+
+var
+
+quantCarros : inteiro
+aluguelPorCarro, faturMensal, faturAnual : real
+
+Inicio
+
+	Escreva("Qual a quantidade de carros na locadora?")
+	Leia(quantCarros)
+	Escreva("Digite o valor do aluguel por carro:")
+	Leia(aluguelPorCarro)
+
+	faturMensal <- quantCarros * aluguelPorCarro
+	faturAnual <- ((quantCarros * 0.8) * aluguelPorCarro) * 12
+
+	Escreva("Você faturou R$ ", faturMensal, " mensal.")
+	Escreva("Você faturou R$ ", faturAnual, " anual")
+
+Fim

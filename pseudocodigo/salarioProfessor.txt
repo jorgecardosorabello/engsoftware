@@ -1,0 +1,20 @@
+Algoritmo salarioProfessor
+
+var
+
+horaAula, quantHoraAula, percDesconto, salarioBruto, salarioLiquido : real
+
+Inicio
+	Escreva("Digite o valor da Hora-Aula:")
+	Leia(horaAula)
+	Escreva("Digite a quantidade de Horas-Aula lecionadas:")
+	Leia(quantHoraAula)
+	Escreva("Digite o percentual de desconto do INSS:")
+	Leia(percDesconto)
+
+	salarioBruto <- horaAula * quantHoraAula
+	salarioLiquido <- salarioBruto - (salarioBruto * (percDesconto/100))
+
+	Escreva("O salário bruto foi R$ ", salarioBruto)
+	Escreva("O salário líquido foi R$ ", salarioLiquido)
+Fim

@@ -1,0 +1,16 @@
+Algoritmo circulo
+
+var
+
+	raio, area, perimetro : real
+
+Início
+	Escreva("Digite o raio do circulo: ")
+	Leia(raio)
+	
+	area <- pi * sqr(raio)
+	perimetro <- 2 * pi * raio
+
+	Escreva("O circulo possui ", area, " de área e ", perimetro, " de perímetro.")
+
+Fim

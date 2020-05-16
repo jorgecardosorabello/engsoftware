@@ -1,0 +1,20 @@
+Algoritmo desconto
+
+var
+
+	precoProduto, percentualDesconto, valorDoDesconto, valorPagar : real
+
+Inicio
+	Escreva("Informe o valor original do produto: ")
+	Leia(precoProduto)
+	Escreva("Informe o percentual de desconto para esse produto: ")
+	Leia(percentualDesconto)
+
+	
+	valorDoDesconto <- (precoProduto * percentualDesconto) / 100
+	valorPagar <- precoProduto - valorDoDesconto
+
+	Escreva("Desconto de: R$", valorDoDesconto, ".")
+	Escreva(" O valor a pagar é: R$", valorPagar)
+
+Fim

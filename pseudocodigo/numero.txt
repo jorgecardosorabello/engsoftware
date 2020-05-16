@@ -1,0 +1,15 @@
+Algoritmo numero
+
+var
+	num : inteiro
+
+Inicio
+
+	Escreva("Informe um número: ")
+	Leia(num)
+	
+	Escreva("O antecessor é: ", num-1)
+	Escreva("O número é: ", num)
+	Escreva("O sucessor é: ", num+1)
+
+Fim

@@ -1,0 +1,15 @@
+Algoritmo idade
+
+var anoDesejado, anoDeNascimento, idade : inteiro
+
+Inicio	
+	Escreva("Digite o ano de nascimento: ")
+	Leia(anoDeNascimento)	
+	Escreva("Agora informe em que ano você deseja saber: ")
+	Leia(anoDesejado)
+
+	idade <- anoDesejado - anoDeNascimento
+
+	Escreve("Nascidos no ano", anoDeNascimento, " terão em", anoDesejado, ", ", idade, " anos de idade.")
+
+Fim
