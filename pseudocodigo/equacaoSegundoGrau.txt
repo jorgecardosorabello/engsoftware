@@ -1,0 +1,33 @@
+Algoritmo equacaoSegundoGrau
+
+Var
+	a, b, c, delta, x1, x2 : real
+
+Início
+
+	Escreva("Digite a: ")
+	Leia(a)
+	EscrevaL("Digite b: ")
+	Leia(b)
+	EscrevaL("Digite c: ")
+	Leia(c)
+
+	delta <-  (b * b) - 4 * a * c 
+	
+	Se(delta < 0) então
+		EscrevaL("Não existe raiz real.")
+	Senão
+		Se(delta = 0) então
+			x1 <- (-b) / (2 * a)
+			EscrevaL("x1 é: ", x1)
+		Senão
+			Se(delta > 0) então
+				x1 <- (-b + sqrt(delta)) / (2 * a)
+				EscrevaL("x1 é: ", x1)
+				x2 <- (-b - sqrt(delta)) / (2 * a)
+				EscrevaL("x2 é: ", x2)
+			Fim_se
+		Fim_se
+	Fim_se
+
+Fim

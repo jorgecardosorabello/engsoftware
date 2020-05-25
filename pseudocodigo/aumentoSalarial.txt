@@ -1,0 +1,40 @@
+Algoritmo aumentoSalarial
+
+var
+	salarioBase, valorAumento, novoSalario : real
+	codigoCargo : inteiro
+
+Início
+
+	Escreva("Informe o salário: ")
+	Leia(salarioBase)
+	Escreva("Informe o código do cargo: ")
+	Leia(codigoCargo)
+
+	Se(codigoCargo = 0 || codigoCargo >= 5) então
+		EscrevaL("Código inválido. Informe um código válido!")
+	Senão
+		Se(codigoCargo = 1) então
+			valorAumento <- salarioBase * (50/100)
+			novoSalario <- salarioBase + valorAumento
+			EscrevaL("Serviços Gerais, aumento de: R$ ", valorAumento, ", novo salário: R$ ", novoSalario)
+		Senão
+			Se(codigoCargo = 2) então
+				valorAumento <- salarioBase * (30/100)
+				novoSalario <- salarioBase + valorAumento
+				EscrevaL("Vigia, aumento de: R$ ", valorAumento, ", novo salário: R$ ", novoSalario)
+			Senão
+				Se(codigoCargo = 3) então
+					valorAumento <- salarioBase * (25/100)
+					novoSalario <- salarioBase + valorAumento
+					EscrevaL("Recepcionista, aumento de: R$ ", valorAumento, ", novo salário: R$ ", novoSalario)
+				Senão
+					valorAumento <- salarioBase * (15/100)
+					novoSalario <- salarioBase + valorAumento
+					EscrevaL("Vendedor, aumento de: R$ ", valorAumento, ", novo salário: R$ ", novoSalario)
+				Fim_se
+			Fim_se
+		Fim_se
+	Fim_se
+
+Fim
