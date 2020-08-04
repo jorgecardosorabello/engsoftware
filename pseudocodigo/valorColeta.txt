@@ -1,0 +1,44 @@
+Algoritmo valorColeta
+
+Var
+	nome : Vetor[20] de caractere
+	tipoNome : Vetor[10] de caractere
+	codigoCadastro, tipoProduto : inteiro
+	pesoDosProdutos, totalReceber, valorPorKg : real
+  
+Inicio
+	Escreva("Informe o nome do catador: ")
+	Leia(nome)
+	EscrevaL("Informe o código do catador: ")
+	Leia(codigoCadastro)
+
+	EscrevaL("-------------------------")
+	
+	EscrevaL("Peso coletado: ")
+	Leia(pesoDosProdutos)
+
+	EscrevaL("Qual produto será calculado:")
+	EscrevaL("1 - Plático; 2 - Vidro; 3 - Papel; 4 - Metal")
+	Leia(tipoProduto)
+
+	Caso (tipoProduto)
+		Seja 1 faça
+			valorPorKg <- 0.25
+			tipoNome <- "plásticos"
+		Seja 2 faça
+			valorPorKg <- 0.32
+			tipoNome <- "vidros"
+		Seja 3 faça
+			valorPorKg <- 0.05
+			tipoNome <- "papéis"
+		Seja 4 faça
+			valorPorKg <- 0.15
+			tipoNome <- "metais"
+		Senão
+			EscrevaL("Escolha um tipo de produto válido. Digite de 1 a 4.")
+	Fim_caso
+
+	totalReceber <- pesoDosProdutos * valorPorKg
+
+	EscrevaL("O ", nome, " com cadastro n. ", codigoCadastro, " trouxe ", pesoDosProdutos, " quilos de ", tipoNome, " total a receber R$ ", totalReceber, ".")
+Fim

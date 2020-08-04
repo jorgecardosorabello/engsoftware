@@ -1,0 +1,76 @@
+Algoritmo merceariaJoaoMessias
+
+	// 1 - Uma rotina de cadastro do cliente. 20 clientes no caderninho. Cada cliente tem 10 notinhas.
+	Tipo add_cliente:
+		registro nomeCliente: Vetor[1..20] de caractere
+		valorNotinha: Vetor[1..10] de real
+		dividaDoCliente: real
+	Fim_registro
+
+Var
+	cliente: Vetor[1..20] de add_cliente
+	i, j, k, l, m, n, opcao: inteiro
+	totalNotinhas: real
+	resp: caractere
+
+Inicio
+	i <-0
+  totalNotinhas <- 0
+  repita
+		Escreva("Escolha uma opção:")
+    EscrevaL("1 - Inserir Novo cliente")
+    EscrevaL("2 - Listar clientes")
+    EscrevaL("3 - Pesquisar cliente específico")
+    EscrevaL("4 - 	Somatório total devido pelos clientes")
+    EscrevaL("5 - Sair")
+		Leia(opcao)
+
+		Caso(opcao)
+			Seja 1 faça
+				resp <- 's'
+				enquanto((resp = 's' ou resp = 'S') e i<20) faça
+					i <- i+1
+					cliente[i].dividaDoCliente <- 0 
+						EscrevaL("Nome do cliente: ") 
+						Leia(cliente[i].nomeCliente)
+						EscrevaL("Quantas notinhas o ", cliente[i].nomeCliente, "possui?")
+						Leia(l)
+						Para j de 1 até l passo 1 faça
+							EscrevaL("Valor da Notinha ", j,": ")
+							Leia(cliente[i].valorNotinha[j])
+							cliente[i].dividaDoCliente <- cliente[i].dividaDoCliente + cliente[i].valorNotinha[j]
+						Fim_para
+						totalNotinhas <- totalNotinhas + cliente[i].dividaDoCliente 
+						EscrevaL("Deseja continuar [s][n]")
+						Leia(resp)
+					Fim_enquanto
+				// 2 - Impressão de todos os clientes com o seu valor total a pagar.
+			Seja 2 faça
+				se(i > 0) então
+					Para k de 1 até i passo 1 faça
+						EscrevaL(cliente[k].nomeCliente, " - R$ ", cliente[k].dividaDoCliente)
+					Fim_para
+				senão
+					EscrevaL("Não há registro")
+				fim_se
+			// 3 - Uma rotina que imprima na tela os valores e o somatório de um cliente em específico.
+			Seja 3 faça
+				se(i > 0) então
+					EscrevaL("Pesquisa por cliente específico.")
+						Para m de 1 até i passo 1 faça
+							EscrevaL(m, " - ", cliente[m].nomeCliente)
+							EscrevaL(“ ”)
+						Fim_para
+					Leia(n)
+					EscrevaL("O cliente ", cliente[n].nomeCliente, "deve ", cliente[n].dividaDoCliente)
+				senão
+					EscrevaL("Não há registros")
+				fim_se
+			// 4 - E ao final mostrar um somatório total.
+			Seja 4 faça
+				EscrevaL("Ao todo, as notinhas somam R$ ", totalNotinhas)
+			Senão faça
+				EscrevaL("Entre com uma opção válida.")
+			Fim_caso
+	Até_que(opcao=5)
+Fim

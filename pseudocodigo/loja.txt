@@ -1,0 +1,35 @@
+Algoritmo loja
+Tipo 
+	cadastro: registro
+		nome: vetor[1..80] de caractere
+		telefone: vetor[1..10] de caractere
+		nomeProduto: vetor[1..10] de caractere
+		preco: real
+	Fim_registro
+
+Var
+	eletrodomestico: Vetor[1..15] de cadastro
+	i: inteiro
+	media, total : real
+	
+Inicio
+total<-0
+	Para i de 1 até 15 passo 1 faça
+		Escreva("Informe o nome da loja: ")
+		Leia(eletrodomestico[i].nome)
+		Escreva("informe o telefone da loja")
+		Leia(eletrodomestico[i].telefone)
+		Escreva("Informe o nome do produto")
+		Leia(eletrodomestico[i].nomeProduto)
+		Escreva("Informe o preço do produto")
+		Leia(eletrodomestico[i].preco)
+		
+		total<-total+eletrodomestico[i].preco
+	Fim_para
+	media<-total/i
+	Para i de 1 até 15 passo 1 faça
+		se(eletrodomestico[i].preco < media)então
+			Escreva(eletrodomestico[i].nome," - ", eletrodomestico[i].telefone)
+		Fim_se
+	Fim_para
+Fim
